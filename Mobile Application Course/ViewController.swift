@@ -9,15 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction func Submit() {
-        let vc = storyboard?.instantiateViewController(identifier: "other") as! SecondViewController
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
+        if let SecondViewController = seque.destination as? ViewController {
+            SecondViewController.text = textField.text
+        }
     }
+    
+//    @IBAction func Submit() {
+//        let vc = storyboard?.instantiateViewController(identifier: "other") as! SecondViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        present(vc, animated: true)
+//    }
     
 }
 

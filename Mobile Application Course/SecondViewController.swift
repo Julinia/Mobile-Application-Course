@@ -8,10 +8,15 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    @IBOutlet weak var label: UILabel!
+    
+    var text: String? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        label.text = text
     }
 
 }
