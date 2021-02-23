@@ -30,6 +30,7 @@
                                 <connections>
                                     <action selector="Submit" destination="BYZ-38-t0r" eventType="touchUpInside" id="TLL-Yx-Rex"/>
                                     <action selector="Submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHM-S8-Fwm"/>
+                                    <segue destination="IiF-Ia-Y8g" kind="presentation" id="xOC-Pz-5Bz"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ryq-bv-bYR">
@@ -44,7 +45,6 @@
                     </view>
                     <connections>
                         <outlet property="textField" destination="ryq-bv-bYR" id="cbA-vC-iOn"/>
-                        <segue destination="IiF-Ia-Y8g" kind="presentation" destinationCreationSelector="UIStoryBoardSeque:" id="vvf-Yn-dJ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,14 +68,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9u-ZJ-MDY">
-                                <rect key="frame" x="175" y="230" width="86" height="30"/>
+                                <rect key="frame" x="175" y="238" width="86" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="UPPERCASE"/>
+                                <connections>
+                                    <action selector="uppercase:" destination="IiF-Ia-Y8g" eventType="touchUpInside" id="HyS-At-IeA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frW-IF-aZa">
                                 <rect key="frame" x="184" y="276" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="lowercase"/>
+                                <connections>
+                                    <action selector="lowercase:" destination="IiF-Ia-Y8g" eventType="touchUpInside" id="xOX-wB-yEE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="31a-qd-vze"/>

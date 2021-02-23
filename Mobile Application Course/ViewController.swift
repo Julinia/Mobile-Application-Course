@@ -7,8 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, SecondViewControllerDelegate {
     
     @IBOutlet weak var textField: UITextField!
     
@@ -17,16 +16,14 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
-        if let SecondViewController = seque.destination as? ViewController {
-            SecondViewController.text = textField.text
+        if let secondViewController = seque.destination as? SecondViewController {
+            secondViewController.text = textField.text
+            secondViewController.delegate = self
         }
     }
-    
-//    @IBAction func Submit() {
-//        let vc = storyboard?.instantiateViewController(identifier: "other") as! SecondViewController
-//        vc.modalPresentationStyle = .fullScreen
-//        present(vc, animated: true)
-//    }
+    func textChanged(text: String?) {
+        textField.text = text
+    }
     
 }
 
